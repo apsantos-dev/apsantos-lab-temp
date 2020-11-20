@@ -1,0 +1,183 @@
+#!/usr/bin/env bash
+# shellcheck disable=2155
+# vim: et ts=2 sw=2 ft=sh:
+
+declare -a LANGUAGE_TYPES
+readonly LANGUAGE_TYPES=( "en" "es" "pt-br" )
+
+declare -a LOG_PENDING
+LOG_PENDING=()
+
+# declare -a LOG_PENDING_TYPES
+# LOG_PENDING_TYPES=( "new_file_CLIbot" )
+
+# declare -a LOG_COUNT
+# LOG_COUNT=()
+
+# declare -a LOG_ITEM
+# LOG_ITEM=()
+
+# # tag
+# declare -a LOG_TAG_ALIAS
+# readonly LOG_TAG_ALIAS=( "new" "fix" )
+
+# declare -a LOG_TAG_TEXT
+# readonly LOG_TAG_TEXT=( "Added new " "Download file " )
+
+# declare -a RENDER_TYPES
+# readonly RENDER_TYPES=( "table" "component" )
+
+# ## PROJECT
+
+# # INFO(/): Main folder
+# declare -a main_files
+# readonly main_files=( \
+#   language.info \
+#   Makefile \
+#   README.md
+# )
+# readonly main_arr="${main_files[@]}"
+# readonly main_path=${pwdCLI}
+# readonly main_path_relative=/
+
+# ## FOLDERS
+
+# INFO(.config): src/.config
+declare -a config_files
+readonly config_files=( \
+  arrays \
+  colors \
+  datetime \
+  distro \
+  dotenv \
+  files \
+  language \
+  options \
+  start
+)
+readonly config_arr="${config_files[@]}"
+readonly config_path=${pwdCLI}/src/.config
+readonly config_path_relative=src/.config
+
+# # ---
+
+# # INFO(assets/images): src/assets/images
+# declare -a assets_images_files
+# readonly assets_images_files=( \
+#   favicon.ico
+# )
+# readonly assets_images_arr="${assets_images_files[@]}"
+# readonly assets_images_path=${pwdCLI}/src/assets/images
+# readonly assets_images_path_relative=src/assets/images
+
+# # ---
+
+# # INFO(components): src/components
+# declare -a components_files
+# readonly components_files=( \
+#   loading2 \
+#   message \
+#   toast2
+# )
+# readonly components_arr="${components_files[@]}"
+# readonly components_path=${pwdCLI}/src/components
+# readonly components_path_relative=src/components
+
+# # ---
+
+# # INFO(docs): src/docs
+# declare -a docs_files
+# readonly docs_files=(
+#   README.md2
+# )
+
+# readonly docs_arr="${docs_files[@]}"
+# readonly docs_path=${pwdCLI}/src/docs
+# readonly docs_path_relative=src/docs
+
+# # ---
+
+# # INFO(log): src/log
+# declare -a log_files
+# readonly log_files=( \
+#   CLIbot.md2 \
+#   index.md2
+# )
+# readonly log_arr="${log_files[@]}"
+# readonly log_path=${pwdCLI}/src/log
+# readonly log_path_relative=src/log
+
+# # INFO(make): src/make
+# declare -a make_files
+# readonly make_files=( \
+#   add2 \
+#   log2 \
+#   message \
+#   remove \
+#   render
+# )
+# readonly make_arr="${make_files[@]}"
+# readonly make_path=${pwdCLI}/src/make
+# readonly make_path_relative=src/make
+
+# # ---
+
+# # INFO(pages): src/pages
+# declare -a pages_files
+# readonly pages_files=( \
+#   help2 \
+#   version2
+# )
+
+# readonly pages_arr="${pages_files[@]}"
+# readonly pages_path=${pwdCLI}/src/pages
+# readonly pages_path_relative=src/pages
+
+# # ---
+
+# # INFO(script): src/script
+# declare -a script_files
+# readonly script_files=( \
+#   index.html2 \
+# )
+# readonly script_arr="${script_files[@]}"
+# readonly script_path=${pwdCLI}/src/script
+# readonly script_path_relative=src/script
+
+# # ---
+
+# # INFO(services): src/services
+# declare -a services_files
+# readonly services_files=( \
+#   api2 \
+#   data2 \
+#   cdn2
+# )
+# readonly services_arr="${services_files[@]}"
+# readonly services_path=${pwdCLI}/src/services
+# readonly services_path_relative=src/services
+
+# # ---
+
+# # INFO(test): src/test
+# declare -a test_files
+# readonly test_files=( \
+#   index2
+# )
+# readonly test_arr="${test_files[@]}"
+# readonly test_path=${pwdCLI}/src/test
+# readonly test_path_relative=src/test
+
+# # ---
+
+# # INFO(utils): src/utils
+# declare -a utils_files
+# readonly utils_files=( \
+#   help2 \
+#   validate2
+# )
+# readonly utils_arr="${utils_files[@]}"
+# readonly utils_path=${pwdCLI}/src/utils
+# readonly utils_path_relative=src/utils
+
+# # ---
